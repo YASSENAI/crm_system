@@ -1,0 +1,195 @@
+/* Reset بسيط */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  max-width: 450px;
+  width: 100%;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+header {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, select {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+input:focus, select:focus {
+  border-color: #4facfe;
+  box-shadow: 0 0 6px rgba(79,172,254,0.5);
+}
+
+button {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  border: none;
+  padding: 12px;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  text-decoration: none;
+  background: #333;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #4facfe;
+}
+
+p {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #28a745;
+}
+/* الداش بورد */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* الروابط كأزرار */
+.dashboard a {
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  transition: 0.3s;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* ألوان مختلفة لكل زر */
+.dashboard a:nth-child(1) { background: linear-gradient(135deg, #00b09b, #96c93d); }
+.dashboard a:nth-child(2) { background: linear-gradient(135deg, #2193b0, #6dd5ed); }
+.dashboard a:nth-child(3) { background: linear-gradient(135deg, #ff512f, #dd2476); }
+.dashboard a:nth-child(4) { background: linear-gradient(135deg, #4776e6, #8e54e9); }
+.dashboard a:nth-child(5) { background: linear-gradient(135deg, #ee0979, #ff6a00); }
+
+/* تأثير hover */
+.dashboard a:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
+
+/* تنسيق الجدول */
+.container {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  margin: 20px auto;
+  max-width: 900px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+thead {
+  background: linear-gradient(135deg, #4776e6, #8e54e9);
+  color: #fff;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background: #f1f1f1;
+}
+
+/* الأزرار */
+.btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 0 3px;
+  display: inline-block;
+  transition: 0.3s;
+  color: #fff;
+}
+
+.btn.edit {
+  background: linear-gradient(135deg, #00b09b, #96c93d);
+}
+
+.btn.delete {
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+}
+
+.btn.back {
+  background: #6c757d;
+}
+
+.btn:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
